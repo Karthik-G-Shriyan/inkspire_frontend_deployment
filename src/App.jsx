@@ -20,7 +20,7 @@ import CreatePost from "./pages/Posts/CreatePost";
 import Profile from "./pages/Profile/Profile";
 import Explore from "./pages/Explore/Explore";
 import UpdatePost from "./pages/Posts/UpdatePost";
-import AuthorProfile from "./pages/Authorprofile/AuthorProfile";
+import AuthorProfile from "./pages/AuthorProfile/AuthorProfile";
 import AdminDashboard from "./Admin/AdminDashboard/AdminDashboard";
 import AdminLogin from "./Admin/AdminLogin";
 import PostDisplayAdmin from "./Admin/AdminDashboard/PostDisplayAdmin";
