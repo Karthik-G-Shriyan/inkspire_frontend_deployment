@@ -6,19 +6,25 @@ import { StoreContext } from "../../../Context/StoreContext";
 export default function OAuthSuccess() {
   const [params] = useSearchParams();
   const navigate = useNavigate();
-  const {setToken } = useContext(StoreContext);
+  const {setToken, setPublicId, setUserName } = useContext(StoreContext);
 
   useEffect(() => {
     const token = params.get("token");
+    const publicId = params.get("publicId");
+    const userName = params.get("userName");
     if (token) {
       sessionStorage.setItem("token", token);
+      sessionStorage.setItem('publicId', publicId);
+      sessionStorage.setItem('userName', userName);
       setToken(token);
+      setPublicId(publicId);
+      setUserName(userName);
 
-      navigate("/");
+      setTimeout( () => navigate("/") , 200);
     } else {
       navigate("/login");
     }
-  }, [navigate, params]);
+  }, [navigate, params, setToken, setPublicId, setUserName]);
 
   return <p>Signing you in...</p>;
 }

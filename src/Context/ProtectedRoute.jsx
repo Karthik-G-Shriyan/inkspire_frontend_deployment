@@ -1,10 +1,10 @@
 // src/components/ProtectedRoute.jsx
 import React, { useContext } from "react";
 import { Navigate } from "react-router-dom";
-import { AuthContext } from "../contexts/AuthContext";
+import { StoreContext } from "../Context/StoreContext";
 
 const ProtectedRoute = ({ children }) => {
-  const { token } = useContext(AuthContext);
+  const { token } = useContext(StoreContext);
 
   if (!token) {
     // User is not logged in → redirect to login page
