@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:8080/api/users";
+const API_URL = "https://inkspire-backend-deployment-374341519167.asia-south1.run.app/api/users";
 
 export const registerUser = async (data) => {
     try {

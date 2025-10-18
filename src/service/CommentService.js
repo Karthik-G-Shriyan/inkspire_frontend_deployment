@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const COMMENT_API = "http://localhost:8080/api/comments";
+const COMMENT_API = "https://inkspire-backend-deployment-374341519167.asia-south1.run.app/api/comments";
 
 // Fetch all comments for a post
 export const fetchCommentsByPost = async (postId, token) => {

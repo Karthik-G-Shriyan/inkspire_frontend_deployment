@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:8080/api/posts";
+const API_URL = "https://inkspire-backend-deployment-374341519167.asia-south1.run.app/api/posts";
 
 
 export const fetchAllPosts = async (page , size ) => {
@@ -29,7 +29,7 @@ export const fetchPostById = async (id, token) => {
 
 export const createPost = async (postData, token) => {
  try {
-   const response = await axios.post("http://localhost:8080/api/posts/create", postData, {
+   const response = await axios.post("https://inkspire-backend-deployment-374341519167.asia-south1.run.app/api/posts/create", postData, {
     headers: { Authorization: `Bearer ${token}` }
   });
   return response.data;
@@ -43,7 +43,7 @@ export const createPost = async (postData, token) => {
 export const updatePost = async (postData, token, postId) => {
   try {
     const response = await axios.put(
-      `http://localhost:8080/api/posts/update/${postId}`,
+      `https://inkspire-backend-deployment-374341519167.asia-south1.run.app/api/posts/update/${postId}`,
       postData,
       {
         headers: { Authorization: `Bearer ${token}` },

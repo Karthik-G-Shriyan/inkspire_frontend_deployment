@@ -58,7 +58,7 @@ const Login = () => {
 
   // OAuth2 placeholders
   const handleGoogleOAuth = () => {
-    window.location.href = "http://localhost:8080/oauth2/authorization/google";
+    window.location.href = "https://inkspire-backend-deployment-374341519167.asia-south1.run.app/oauth2/authorization/google";
   };
   const handleGithubOAuth = () => toast.info("GitHub OAuth2 login clicked!");
 

@@ -1,7 +1,7 @@
 // src/services/FollowService.js
 import axios from "axios";
 
-const API_URL = "http://localhost:8080/api/follow";
+const API_URL = "https://inkspire-backend-deployment-374341519167.asia-south1.run.app/api/follow";
 
 // Get followers
 export const getFollowers = async ( token, userId) => {

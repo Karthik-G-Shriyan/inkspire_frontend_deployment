@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:8080/api/admin";
+const API_URL = "https://inkspire-backend-deployment-374341519167.asia-south1.run.app/api/admin";
 
 
 
