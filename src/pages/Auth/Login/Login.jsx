@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { StoreContext } from "../../../Context/StoreContext";
 import "react-toastify/dist/ReactToastify.css";
-import { FaGithub, FaEnvelope, FaLock, FaEye, FaEyeSlash, FaSignInAlt } from "react-icons/fa";
+import { FaEnvelope, FaLock, FaEye, FaEyeSlash, FaSignInAlt } from "react-icons/fa";
 import { loginUser } from "../../../service/AuthService";
 import { assets } from "../../../assets/assets";
 
@@ -56,11 +56,10 @@ const Login = () => {
     }
   };
 
-  // OAuth2 placeholders
+  // OAuth2 Google login
   const handleGoogleOAuth = () => {
     window.location.href = "https://inkspire-backend-deployment-374341519167.asia-south1.run.app/oauth2/authorization/google";
   };
-  const handleGithubOAuth = () => toast.info("GitHub OAuth2 login clicked!");
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 px-4 py-12">
@@ -76,24 +75,14 @@ const Login = () => {
 
         {/* Main Card */}
         <div className="bg-white rounded-2xl shadow-xl p-8 space-y-6">
-          {/* OAuth Buttons */}
-          <div className="space-y-3">
-            <button
-              onClick={handleGoogleOAuth}
-              className="w-full flex items-center justify-center gap-3 px-4 py-3 border-2 border-gray-200 rounded-xl hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 font-medium text-gray-700 group"
-            >
-              <img src={assets.google_logo} alt="logo" width={24} height={24} />
-              Continue with Google
-            </button>
-
-            <button
-              onClick={handleGithubOAuth}
-              className="w-full flex items-center justify-center gap-3 px-4 py-3 border-2 border-gray-200 rounded-xl hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 font-medium text-gray-700 group"
-            >
-              <FaGithub className="text-xl text-gray-800 group-hover:scale-110 transition-transform" />
-              Continue with GitHub
-            </button>
-          </div>
+          {/* Google OAuth Button */}
+          <button
+            onClick={handleGoogleOAuth}
+            className="w-full flex items-center justify-center gap-3 px-4 py-3 border-2 border-gray-200 rounded-xl hover:bg-gray-50 hover:border-blue-400 transition-all duration-200 font-medium text-gray-700 shadow-sm hover:shadow-md"
+          >
+            <img src={assets.google_logo} alt="Google logo" width={24} height={24} />
+            Continue with Google
+          </button>
 
           {/* Divider */}
           <div className="flex items-center gap-4">

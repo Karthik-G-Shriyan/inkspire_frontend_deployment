@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {  FaGithub, FaEye, FaEyeSlash, FaUser, FaEnvelope, FaLock } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaUser, FaEnvelope, FaLock } from "react-icons/fa";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { registerUser } from "../../../service/AuthService";
@@ -77,8 +77,6 @@ const Register = () => {
   const handleGoogleOAuth = () => {
     window.location.href = "https://inkspire-backend-deployment-374341519167.asia-south1.run.app/oauth2/authorization/google";
   };
-  
-  const handleGithubOAuth = () => toast.info("GitHub OAuth2 login clicked!");
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 px-4 py-12">
@@ -94,24 +92,14 @@ const Register = () => {
 
         {/* Main Card */}
         <div className="bg-white rounded-2xl shadow-xl p-8 space-y-6">
-          {/* OAuth Buttons */}
-          <div className="space-y-3">
-            <button
-              onClick={handleGoogleOAuth}
-              className="w-full flex items-center justify-center gap-3 px-4 py-3 border-2 border-gray-200 rounded-xl hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 font-medium text-gray-700 group"
-            >
-              <img src={assets.google_logo} alt="logo" width={24} height={24} />
-              Continue with Google
-            </button>
-
-            <button
-              onClick={handleGithubOAuth}
-              className="w-full flex items-center justify-center gap-3 px-4 py-3 border-2 border-gray-200 rounded-xl hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 font-medium text-gray-700 group"
-            >
-              <FaGithub className="text-xl text-gray-800 group-hover:scale-110 transition-transform" />
-              Continue with GitHub
-            </button>
-          </div>
+          {/* Google OAuth Button */}
+          <button
+            onClick={handleGoogleOAuth}
+            className="w-full flex items-center justify-center gap-3 px-4 py-3 border-2 border-gray-200 rounded-xl hover:bg-gray-50 hover:border-blue-400 transition-all duration-200 font-medium text-gray-700 shadow-sm hover:shadow-md"
+          >
+            <img src={assets.google_logo} alt="Google logo" width={24} height={24} />
+            Continue with Google
+          </button>
 
           {/* Divider */}
           <div className="flex items-center gap-4">

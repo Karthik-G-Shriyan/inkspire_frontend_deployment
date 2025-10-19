@@ -292,7 +292,7 @@ const Comments = ({ postId, isDarkMode = false }) => {
                         {/* Delete Button - Only for user's own comments */}
                         {isUserComment(comment) && (
                           <button
-                            onClick={() => handleDelete(comment.id, idx)}
+                            onClick={() => handleDelete(comment.commentId, idx)}
                             disabled={deletingId === idx}
                             className={`p-2 rounded-lg transition-all duration-200 ${
                               isDarkMode
